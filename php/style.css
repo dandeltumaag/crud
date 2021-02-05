@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --cl0a : #DAF7A6;
+    --cl0b : #FFC300;
+    --cl0c : #FF5733;
+    --cl0d : #C70039;
+    --cl0e : #900C3F;
+    --cl0f : #581845;
+    --success: #27F365;
+    --error: #F3130C; 
+}
+
+*,
+*::before,
+*::after  {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--cl0e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login_container {
+    width: 400px;
+    max-width: 100%;
+    background-color: var(--cl0a);
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+.login_container .header {
+    padding: 20px 40px;
+    background-color: var(--cl0c);
+    border-bottom: 1px solid var(--cl0b);
+}
+.login_container h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+.login_form {
+    padding: 30px 40px;
+}
+
+.login_form .form_control{
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.login_form label {
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.login_form input {
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--cl0b);
+    font-size: 14px;
+}
+.login_form .form_control.success input{
+    border: 1px solid var(--success);
+}
+.login_form .form_control.error input{
+    border: 1px solid var(--error);
+}
+
+.login_form i {
+    position: absolute;
+    top: 43px;
+    right: 10px;
+    visibility: hidden;
+}
+.login_form .form_control.success i.fa-check-circle{
+    visibility: visible;
+    color: var(--success) ;
+}
+.login_form .form_control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: var(--error) ;
+}
+
+.login_form .form_control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} 
+.login_form .form_control.error small {
+    visibility: visible;
+    color: var(--error);
+}
+
+.login_form .btn_submit {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cl0e);
+    border: 1px solid var(--cl0e);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.login_form .btn_submit:hover {
+    background-color: var(--cl0d);
+}
